@@ -1,0 +1,27 @@
+//Connect to MongoDB
+use himachal_tour
+
+// Create the tours collection and insert sample data
+db.tours.insertMany([
+  {
+    name: "Shimla Tour",
+    description: "Explore the beautiful hill station of Shimla.",
+    image: "https://example.com/images/shimla.jpg",
+    price: 15000
+  },
+  {
+    name: "Manali Tour",
+    description: "Experience the adventure and beauty of Manali.",
+    image: "https://example.com/images/manali.jpg",
+    price: 20000
+  },
+  {
+    name: "Dharamshala Tour",
+    description: "Visit the serene town of Dharamshala.",
+    image: "https://example.com/images/dharamshala.jpg",
+    price: 18000
+  }
+]);
+
+// Create the inquiries collection (you can leave it empty for now)
+db.inquiries.createIndex({ email: 1 }, { unique: true });
